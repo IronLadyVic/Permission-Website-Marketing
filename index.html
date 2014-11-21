@@ -7,6 +7,7 @@
   <meta name="description" content="June 1010 Newsletter">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <style>
   body{
     width: 100%;
@@ -24,6 +25,10 @@
     font-size: 1.5em;
     line-height: 110%;
     text-align: center;
+
+  }
+  .container h1{
+    padding-top: 1.5em;
   }
   table {
     border-spacing: 0;
@@ -49,11 +54,19 @@
     width: 100%;
   }
 
-  center{
+  .center{
+    display: block;
+    height: 5em;
+text-align: -webkit-center;
+margin: 0 auto;
     background: -webkit-linear-gradient(#2D3142, black); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#2D3142, black); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#2D3142, black); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#2D3142, black); /* Standard syntax */
+  }
+  .date p {
+    text-align: -webkit-center;
+    padding-bottom: 1em;
   }
 
   .logoHeader img{
@@ -90,8 +103,11 @@
     .section h2{
     border-bottom: 1px solid #dfdfdf;
     padding-bottom: 0.5em;
-    font-size: 0.9em;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    text-align: center;
   }
+
   .section p{
     width: 100%;
     text-align: center;
@@ -188,7 +204,25 @@
 .articleHeader h2{
   text-align: center;
 }
+.contacts p{
+  float: left;
+}
 
+.contacts p a{
+  float: left;
+  padding: 1em;
+  font-size: 0.7em;
+  color: #2D3142;
+  text-decoration: none;
+  transition: color 1s ease;
+}
+
+.contacts p a:hover{
+  color:#A8CB65;
+}
+.contacts i{
+  padding-right: 0.5em;
+}
 
 /*
 Tablet responsive*/
@@ -247,6 +281,16 @@ Tablet responsive*/
 Mobile responsive*/
 
 @media only screen and (max-width: 600px) {
+    .container h1{
+    padding-top: 2em;
+  }
+
+table.container h1{
+  font-size: 1.2em;
+  width: 100%;
+}
+
+
 .logoHeader img{
     width: 80%;   
 
@@ -263,6 +307,9 @@ Mobile responsive*/
   font-weight: 100;
   width: 100%;
   margin-left: 0em;
+}
+.wrapSection h2{
+  font-weight: bold;
 }
 
 td.mainHeader h1{
@@ -288,9 +335,17 @@ margin: auto;
     width: 100%;
     padding-top: 1em;
   }
-  .section h1{
+
+
+  .sectionHeader{
+    text-align: center;
+  }
+
+
+  .section h2{
     width: 90%;
     margin: 0 auto;
+    font-size: 1.2em;
   }
   .section p{
     width: 90%;
@@ -315,6 +370,9 @@ margin: auto;
   width: 100%;
   margin-left: 0em;
 }
+.article h2{
+  font-weight: bold;
+}
 .article td p{
 text-align: left;
 margin: auto;
@@ -323,7 +381,12 @@ margin: auto;
 .articleHeader p img{
   width: 15%;
 }
-
+.contacts p:nth-child(2){
+  margin-top: -2em;
+}
+.contacts p:nth-child(3){
+  margin-top: -2em;
+}
 
 }
   </style>
@@ -333,12 +396,11 @@ margin: auto;
 <body>
     <table class="body">
         <tr>
-            <td class="center" align="center" valign="top">
-                <center>
-                    <table>
+            <td class="center">
+                
+                    <table class="container">
                         <tr>
-                            <td class="center" align="center">
-                                <center>
+                            <td class="center">
                                     <!--Logo Top Navigation -->
                                     <table class="navigationContainer">
                                         <tbody>
@@ -350,22 +412,18 @@ margin: auto;
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <!--Logo Top Navigation -->
-                                </center>
-
+                                 <!--Logo Top Navigation -->
                             </td>
                         </tr>
                     </table>
-                </center>
-                <!-- <table class="container">
-                  <center>
+                
+                <table class="container">
                     <tr>
                       <td>
                         <p>June 2010 Newsletter</p>
                       </td>
-                    </tr>
-                  </center>
-                </table> -->
+                    </tr>                 
+                </table>
             </td>
         </tr>
     </table>
@@ -430,10 +488,13 @@ margin: auto;
                     </td>
                   </tr>
                 </table>
-
-              </tr>
-            </td>
-      </table>
+              </td>
+            </tr>
+            
+          </table>
+        </td>
+      </tr>            
+    </table>     
       <!-- end of Section One-->
       <!-- Section Two-->
       <table class="container">
@@ -446,7 +507,7 @@ margin: auto;
                             <tr>
                                 <td class="section">
                                     <p><img src="assets/img/downarrow-green.png" alt="down"></p>
-                                    <h1>Our support services provide custom-designed online marketing support services.</h1>
+                                    <h2 class="sectionHeader">Our support services provide custom-designed online marketing support services.</h2>
                                     <p>These cover a whole range of competencies that focus on two basic outcomes delivering your website more traffic, and then improving your site's ability to convert this in to either paying customers or registered leads.</p>
                                 </td>
                             </tr>
@@ -458,81 +519,81 @@ margin: auto;
       </table>
       <!-- end of Section Two-->
       <!-- section three -->
-    <table class="container">
-      <tr>
-        <td>
-          <table class="main">
-            <tbody>
+      <table class="container">
+        <tr>
+          <td>
+            <table class="main">
+              <tbody>
+                <tr>
+                  <td class="articleHeader">
+                    <p><img src="assets/img/downarrow-green.png" alt="down"></p>
+                    <h2>Online Articles</h2>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="main">
               <tr>
-                <td class="articleHeader">
-                  <p><img src="assets/img/downarrow-green.png" alt="down"></p>
-                  <h2>Online Articles</h2>
+                <td>
+                  <table class="article">
+                    <tr>
+                      <td>
+                        <!-- article one -->
+                        <h2>Find Your On line Advertising Gold In Email Marketing</h2>
+                        <p>Serving nice coffee is one of the many benefits that bricks and mortar shops have over their web cousins. One other less obvious are the roads and pathways that line their front door.</p>
+                        <p><a href="#">Read more.</a></p>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="article">
+                    <tr>
+                      <td>
+                        <!-- article two -->
+                        <h2>Find Your On line Advertising Gold In Email Marketing</h2>
+                        <p>Serving nice coffee is one of the many benefits that bricks and mortar shops have over their web cousins. One other less obvious are the roads and pathways that line their front door.</p>
+                        <p><a href="#">Read more.</a></p>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="article">
+                    <tr>
+                      <td>
+                        <!-- article three -->
+                        <h2>Find Your On line Advertising Gold In Email Marketing</h2>
+                        <p>Serving nice coffee is one of the many benefits that bricks and mortar shops have over their web cousins. One other less obvious are the roads and pathways that line their front door.</p>
+                        <p><a href="#">Read more.</a></p>
+                      </td>
+                    </tr>
+                  </table>
                 </td>
               </tr>
-            </tbody>
-          </table>
-          <table class="main">
-            <tr>
-              <td>
-                <table class="article">
-                  <tr>
-                    <td>
-                      <!-- article one -->
-                      <h2>Find Your On line Advertising Gold In Email Marketing</h2>
-                      <p>Serving nice coffee is one of the many benefits that bricks and mortar shops have over their web cousins. One other less obvious are the roads and pathways that line their front door.</p>
-                      <p><a href="#">Read more.</a></p>
-                    </td>
-                  </tr>
-                </table>
-                <table class="article">
-                  <tr>
-                    <td>
-                      <!-- article two -->
-                      <h2>Find Your On line Advertising Gold In Email Marketing</h2>
-                      <p>Serving nice coffee is one of the many benefits that bricks and mortar shops have over their web cousins. One other less obvious are the roads and pathways that line their front door.</p>
-                      <p><a href="#">Read more.</a></p>
-                    </td>
-                  </tr>
-                </table>
-                <table class="article">
-                  <tr>
-                    <td>
-                      <!-- article three -->
-                      <h2>Find Your On line Advertising Gold In Email Marketing</h2>
-                      <p>Serving nice coffee is one of the many benefits that bricks and mortar shops have over their web cousins. One other less obvious are the roads and pathways that line their front door.</p>
-                      <p><a href="#">Read more.</a></p>
-                    </td>
-                  </tr>
-                </table>
-              </tr>
-            </td>
-      </table>
-
+            </table>
+    </td>
+   </tr>
+</table>
   <!-- end of Section Three-->
 <!--   Contacts and footer -->
 <table class="container">
   <tr>
     <td>
-      <table class="row">
+      <table>
         <tr>
-          <td class="wrapper last">
+          <td>
 
-            <table class="twelve columns">
+            <table>
               <tr>
-                <td align="center">
-                  <center>
-                    <p style="text-align:center;"><a href="#">Phone:XXXXXXXXX</a> | <a href="#">Fax:XXXXXXXXX</a> | <a href="#">Email:XXX@XXX.com</a></p>
-                  </center>
-                </td>
-                <td class="expander"></td>
+                <td class="contacts">
+                    <p><a href="#"><i class="fa fa-phone-square"></i>0800 893 477</a></p>
+                    <p><a href="#"><i class="fa fa-fax"></i>Fax | 09 973 5899</a></p>
+                    <p><a href="#"><i class="fa fa-envelope"></i>sales@arkadvance.com</a></p>
+                </td>               
               </tr>
             </table>
-
           </td>
         </tr>
       </table>
-    </tr>
-  </td>
+    </td>
+  </tr>
 </table>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
